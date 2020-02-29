@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payments gateway</title>
+	<link rel="stylesheet" href="./src/mysyle.css">
+</head>
+<body>
+	<header id="page-header">Please enter your details to perform a transaction</header>
+
+	<div class=gateway-body>
+		<form onsubmit="isSuccessful()">
+			<div class="user-info">
+				
+				<input id="user-id" type="number" name="user-id" placeholder="User ID" required="" max="4"></br>
+				<input id="account-no" type="number" name="account-no" placeholder="Account No" required="" minlength="10" maxlength="10"></br>
+				<input id='transaction-amount' type="number" placeholder="Amount in figures"></br>
+				<label id=payment-chanel>Channel
+					<select id=payment-channel>
+						<option id="pos">POS</option>
+						<option id="atm">ATM</option>
+						<option id="e-channels">e-channels</option>
+					</select>
+				</label>
+				<div>
+				<p><script>document.write(new Date());</script></p>
+				</div>
+
+				<button id="Submit" type="submit"> Submit</button>
+				<div >
+					<p id="transaction-status"></p>
+				</div>
+			</div>
+		</form>
+		
+	</div>
+
+</body>
+</html>
